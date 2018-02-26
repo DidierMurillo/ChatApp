@@ -7,6 +7,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html, body, .all-content, .all-content > * {
+  height: 100%;
+}
+
+body {
+  background-color: #53606b;
+}
+
+.principal-navbar {
+  margin-bottom: 0px;
+}
+
+.short-icon {
+  width: 25px;
+}
+
+.users-title {
+  width: 75%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+}
 
 .messages-list {
   max-height: 200px;
@@ -14,6 +37,10 @@
   overflow-x: hidden;
 }
 
+.user-item img {
+  width: 50px;
+  margin-right: 10px;
+}
 
 .message-sent {
   position: relative;
@@ -31,4 +58,19 @@
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+
+.panel.panel-primary {
+  .panel-heading {
+    color: #fff;
+    background-color: #0a2135;
+    border-color: #0a2135;
+  }
+  height: 95%;
+  background-color: #53606b;
+  border-color: #0a2135;
+}
+
+.left-panel {
+  border: 1px solid #53606b;
 }

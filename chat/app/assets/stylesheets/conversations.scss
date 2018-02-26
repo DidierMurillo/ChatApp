@@ -1,3 +1,53 @@
 // Place all the styles related to the conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.conversation, .message {
+	list-style-type: none;
+}
+
+.message-icon img {
+	width: 20px;
+}
+
+#conversations-list {
+	margin-top: 20px;
+	.panel-default {
+	    border: 1px solid #888888;
+        box-shadow: 4px 1px #888888;
+	    
+	    .panel-heading {
+	    	color: white;
+	    	background-color: #0a2135;
+	    	border-color: #ddd;
+	    }
+
+	    .panel-body {
+	    	background-color: #53606b;
+	    	.messages-list {
+	    		background-color: #b4c4d2;
+    			border: 1px solid white;
+	    	}
+
+	    	.btn-success {
+	    		float: right;
+	    		background-color: #20639c;
+	    		border-color: white;
+	    	}
+	    	.btn-success:hover {
+	    		float: right;
+	    		background-color: #337ab7;
+	    		border-color: white;
+	    	}
+
+	    	.message-sent {
+	    		background-color: #98b9d6;
+	    	}
+
+	    	#message_body {
+	    		margin-top: 5px;
+	    		margin-bottom: 5px;
+	    	}
+	    }
+	}
+}

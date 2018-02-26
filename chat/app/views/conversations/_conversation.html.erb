@@ -1,9 +1,13 @@
-<li>
+<li class="col-md-4 conversation">
   <div class="panel panel-default" data-conversation-id="<%= conversation.id %>">
     <div class="panel-heading">
-      <%= link_to conversation.opposed_user(user).email, '', class: 'toggle-window' %>
-      <%= link_to "x", close_conversation_path(conversation), class: "btn btn-default btn-xs pull-right", remote: true, method: :post %>
+      <%= conversation.opposed_user(user).email %>
+      <%= link_to image_tag("close.png"), close_conversation_path(conversation), class: "pull-right message-icon", remote: true, method: :post %>
+
+      <%= link_to image_tag("expand.png"), '', class: 'pull-right toggle-window message-icon' %>
     </div>
+
+
 
     <div class="panel-body" style="display: none;">
       <div class="messages-list">
