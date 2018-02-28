@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :conversations, only: [:create] do
+  resources :conversations, only: [:create, :delete] do
     member do
       post :close
+      delete :destroy
     end
     resources :messages, only: [:create]	
    end

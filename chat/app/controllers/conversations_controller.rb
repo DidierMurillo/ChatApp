@@ -20,6 +20,11 @@ class ConversationsController < ApplicationController
     end
   end
 
+  def destroy
+      @conversation = Conversation.find(params[:id])
+      @conversation.destroy
+      redirect_to root_path
+  end
   private
 
   def add_to_conversations
@@ -30,6 +35,7 @@ class ConversationsController < ApplicationController
   def conversated?
     session[:conversations].include?(@conversation.id)
   end
+  
 
   
 
